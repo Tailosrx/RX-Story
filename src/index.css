@@ -1,0 +1,46 @@
+/* src/index.css */
+
+/* Estilos base */
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.story-list {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.story-image {
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .story-list {
+    gap: 5px;
+  }
+
+  .story-image {
+    max-width: 120px;
+  }
+
+  .uploader label {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Responsivo para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .story-image {
+    max-width: 90px;
+  }
+
+  .app h1 {
+    font-size: 18px;
+  }
+}
