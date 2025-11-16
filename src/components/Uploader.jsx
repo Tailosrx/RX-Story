@@ -34,19 +34,40 @@ function Uploader() {
   };
 
   return (
-    <div className="uploader">
+    <div className="uploader" style={{ 
+      display: "flex", 
+      flexDirection: "column", 
+      alignItems: "center",
+      gap: "5px"
+    }}>
       <label
         htmlFor="file-upload"
         style={{
           cursor: "pointer",
-          padding: "10px 20px",
-          backgroundColor: "#007bff",
-          color: "white",
-          borderRadius: "5px",
+          width: "80px",
+          height: "80px",
+          borderRadius: "50%",
+          border: "3px dashed #007bff",
+          backgroundColor: "transparent",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: "32px",
+          color: "#007bff",
+          transition: "all 0.3s ease"
+        }}
+        onMouseEnter={(e) => {
+          e.target.style.backgroundColor = "#007bff";
+          e.target.style.color = "white";
+        }}
+        onMouseLeave={(e) => {
+          e.target.style.backgroundColor = "transparent";
+          e.target.style.color = "#007bff";
         }}
       >
-        ➕ Subir Story
+        ➕
       </label>
+      <span style={{ fontSize: "12px", color: "var(--primary-color)" }}>Tu Story</span>
       <input
         id="file-upload"
         type="file"

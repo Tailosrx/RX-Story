@@ -1,13 +1,11 @@
 
-import './App.css'
-import Uploader from './components/Uploader'
+import './Index.css'
 import StoryList from './components/StoryList'
 
 function App() {
  return (
   <div className="App">
-   <h1>Bienvenido!</h1>
-   <Uploader />
+   <h1>RX-Story</h1>
    <StoryList />
   </div>
  )
